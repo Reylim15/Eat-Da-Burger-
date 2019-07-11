@@ -8,9 +8,9 @@ var burger = require("../model/burger.js");
 
 // Home sweet HOME yall
 router.get("/", function(req, res) {
-    burger.selectALL(function(data) {
+    burgers.selectALL(function(data) {
       var hbsObject = {
-        burger: data
+        burgers: data
       };
       console.log(hbsObject);
       res.render("index", hbsObject);
@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
   });
   
   router.post("/burger", function(req, res) {
-    burger.insertONE([
+    burgers.insertONE([
       "burger_name"
     ], [
       req.body.burger_name,
@@ -32,7 +32,7 @@ router.get("/", function(req, res) {
   
     // console.log("condition", condition);
   
-    burger.updateONE({
+    burgers.updateONE({
       devoured:true
     }, condition, function(data) {
     res.redirect("/");
