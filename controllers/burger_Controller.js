@@ -17,19 +17,17 @@ router.get("/", function(req, res) {
     });
   });
   
-
-  router.post("/api/cats", function(req, res) {
-    cat.create([
-      "name", "sleepy"
+  router.post("/burger", function(req, res) {
+    burger.insertONE([
+      "burger_name"
     ], [
-      req.body.name, req.body.sleepy
-    ], function(result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId });
+      req.body.burger_name,
+    ], function(data) {
+      res.redirect("/");
     });
   });
   
-  router.put("/api/cats/:id", function(req, res) {
+  router.put("/burger/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
