@@ -1,8 +1,8 @@
 var connection = require('../config/connection.js');
 
-// selectALL();
-// insertOne(): insert db;
-// updateOne();update db
+// selectALL(); "YAS"
+// insertOne(): insert db; ""YAS I DEED IT"
+// updateOne();update db OMG "YASSSS ITS THARR"
 
 function printQuestionMarks(num) {
 	var arr = [];
@@ -17,19 +17,18 @@ function printQuestionMarks(num) {
 function objToSql(ob) {
 	var arr = [];
 
-	
 	for (var key in ob) {
 		var value = ob[key];
-	
+
 		if (Object.hasOwnProperty.call(ob, key)) {
-		
 			if (typeof value === 'string' && value.indexOf(' ') >= 0) {
 				value = "'" + value + "'";
 			}
-		
+
 			arr.push(key + '=' + value);
 		}
-	}
+  }
+}
 	var orm = {
 		selectALL: function(tableInput, cb) {
 			var queryString = 'SELECT * FROM ' + tableInput + ';';
@@ -60,7 +59,7 @@ function objToSql(ob) {
 				cb(result);
 			});
 		},
-	
+
 		updateONE: function(table, objColVals, condition, cb) {
 			var queryString = 'UPDATE ' + table;
 
@@ -69,8 +68,8 @@ function objToSql(ob) {
 			queryString += ' WHERE ';
 			queryString += condition;
 
-      console.log(queryString);
-      
+			console.log(queryString);
+
 			connection.query(queryString, function(err, result) {
 				if (err) {
 					throw err;
@@ -78,11 +77,9 @@ function objToSql(ob) {
 
 				cb(result);
 			});
-    },
-    
+		}
 
-
-// Not NEEDED(I THINK)
+		// Not NEEDED(I THINK)
 
 		// delete: function(table, condition, cb) {
 		// 	var queryString = 'DELETE FROM ' + table;
@@ -98,6 +95,6 @@ function objToSql(ob) {
 		// 	});
 		// }
 	};
-}
+
 
 module.exports = orm;
