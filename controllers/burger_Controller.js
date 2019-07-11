@@ -8,7 +8,7 @@ var burger = require("../model/burger.js");
 
 // Home sweet HOME yall
 router.get("/", function(req, res) {
-    burgers.selectALL(function(data) {
+    burger.selectALL(function(data) {
       var hbsObject = {
         burgers: data
       };
@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
   });
   
   router.post("/burger", function(req, res) {
-    burgers.insertONE([
+    burger.insertONE([
       "burger_name"
     ], [
       req.body.burger_name,
@@ -27,18 +27,18 @@ router.get("/", function(req, res) {
     });
   });
   
-  router.put("/burger/:id", function(req, res) {
+  router.put("/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     // console.log("condition", condition);
   
-    burgers.updateONE({
+    burger.updateONE({
       devoured:true
     }, condition, function(data) {
     res.redirect("/");
     
     });
-  });``
+  });
   
 // YOUR TIME WILL COME TO DELETE THE BURGERS POLLUTING MY DB !, But now is not the time little one.
 
@@ -54,17 +54,5 @@ router.get("/", function(req, res) {
 //       }
 //     });
 //   });
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
