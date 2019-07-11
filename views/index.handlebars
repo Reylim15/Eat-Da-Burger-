@@ -4,8 +4,7 @@
 
 <ul>
   {{#each burger}}
-    {{#unless devoured}}
-      {{> cats/cat-block sleep=true}}
+    {{#unless this.devoured}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,8 +13,7 @@
 
 <ul>
   {{#each burger}}
-    {{#if devoured}}
-      {{> cats/cat-block sleep=false}}
+    {{#if this.devoured}}
     {{/if}}
   {{/each}}
 </ul>
