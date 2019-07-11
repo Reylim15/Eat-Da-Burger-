@@ -32,7 +32,7 @@ function objToSql(ob) {
 		}
 	}
 	var orm = {
-		all: function(tableInput, cb) {
+		selectALL: function(tableInput, cb) {
 			var queryString = 'SELECT * FROM ' + tableInput + ';';
 			connection.query(queryString, function(err, result) {
 				if (err) {
@@ -41,7 +41,7 @@ function objToSql(ob) {
 				cb(result);
 			});
 		},
-		create: function(table, cols, vals, cb) {
+		insertOne: function(table, cols, vals, cb) {
 			var queryString = 'INSERT INTO ' + table;
 
 			queryString += ' (';
@@ -62,7 +62,7 @@ function objToSql(ob) {
 			});
 		},
 		// An example of objColVals would be {name: panther, sleepy: true}
-		update: function(table, objColVals, condition, cb) {
+		updateONE: function(table, objColVals, condition, cb) {
 			var queryString = 'UPDATE ' + table;
 
 			queryString += ' SET ';
@@ -70,7 +70,8 @@ function objToSql(ob) {
 			queryString += ' WHERE ';
 			queryString += condition;
 
-			console.log(queryString);
+      console.log(queryString);
+      
 			connection.query(queryString, function(err, result) {
 				if (err) {
 					throw err;
@@ -78,20 +79,25 @@ function objToSql(ob) {
 
 				cb(result);
 			});
-		},
-		delete: function(table, condition, cb) {
-			var queryString = 'DELETE FROM ' + table;
-			queryString += ' WHERE ';
-			queryString += condition;
+    },
+    
 
-			connection.query(queryString, function(err, result) {
-				if (err) {
-					throw err;
-				}
 
-				cb(result);
-			});
-		}
+// Not NEEDED(I THINK)
+
+		// delete: function(table, condition, cb) {
+		// 	var queryString = 'DELETE FROM ' + table;
+		// 	queryString += ' WHERE ';
+		// 	queryString += condition;
+
+		// 	connection.query(queryString, function(err, result) {
+		// 		if (err) {
+		// 			throw err;
+		// 		}
+
+		// 		cb(result);
+		// 	});
+		// }
 	};
 }
 
