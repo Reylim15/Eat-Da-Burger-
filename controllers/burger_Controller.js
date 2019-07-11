@@ -30,19 +30,15 @@ router.get("/", function(req, res) {
   router.put("/burger/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
-    console.log("condition", condition);
+    // console.log("condition", condition);
   
-    cat.update({
-      sleepy: req.body.sleepy
-    }, condition, function(result) {
-      if (result.changedRows == 0) {
-
-        return res.status(404).end();
-      } else {
-        res.status(200).end();
-      }
+    burger.updateONE({
+      devoured:true
+    }, condition, function(data) {
+    res.redirect("/");
+    
     });
-  });
+  });``
   
 // YOUR TIME WILL COME TO DELETE THE BURGERS POLLUTING MY DB !, But now is not the time little one.
 
