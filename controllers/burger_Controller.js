@@ -8,16 +8,16 @@ var burger = require("../models/burger.js");
 
 // Home sweet HOME yall
 router.get("/", function(req, res) {
-    cat.all(function(data) {
+    burger.selectALL(function(data) {
       var hbsObject = {
-        cats: data
+        burger: data
       };
       console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
   
-  
+
   router.post("/api/cats", function(req, res) {
     cat.create([
       "name", "sleepy"
