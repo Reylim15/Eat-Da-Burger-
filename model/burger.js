@@ -5,21 +5,22 @@ var orm = require("../config/orm.js");
 // insertOne():
 // updateOne();
 
-// rename
-var cat = {
+// renamed cat to burger, no we didnt eat the cat ('_>')
+
+var burger = {
     selectALL: function(cb) {
-      orm.all("cats", function(res) {
+      orm.all("burger", function(res) {
         cb(res);
       });
     },
     // The variables cols and vals are arrays.
     insertONE: function(cols, vals, cb) {
-      orm.create("cats", cols, vals, function(res) {
+      orm.create("burger", cols, vals, function(res) {
         cb(res);
       });
     },
     updateONE: function(objColVals, condition, cb) {
-      orm.update("cats", objColVals, condition, function(res) {
+      orm.update("burger", objColVals, condition, function(res) {
         cb(res);
       });
     }
