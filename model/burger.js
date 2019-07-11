@@ -1,7 +1,5 @@
 var orm = require("../config/orm.js");
 
-
-
 // rename
 var cat = {
     all: function(cb) {
