@@ -1,11 +1,21 @@
-
--- Copy from cats to fill db
-bINSERT INTO burgers(burger_name,devoured ) Values ('CheeseBurger'),FALSE);
-
-
-INSERT INTO cats (name) VALUES ('Meeses');
-INSERT INTO cats (name) VALUES ('Bobbi');
-INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
-INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
-INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
-INSERT INTO cats (name) VALUES ('Owens');
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(1, 'CheeseBurger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(2, 'Double Bacon Cheeseburger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(3, 'Triple-Stacked Burger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(4, 'CHeesy Cheeseburger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(5, 'Southern Style upside down burger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(6, 'Spicy Pepper Jack Mushroom Baked Rum Burger', 0);
+INSERT INTO burgers_db.burgers
+(id, burger_name, devoured)
+VALUES(7, 'Lime Fried Burger', 0);
