@@ -39,7 +39,7 @@ function objToSql(ob) {
 				cb(result);
 			});
 		},
-		insertOne: function(table, cols, vals, cb) {
+		insertONE: function(table, cols, vals, cb) {
 			var queryString = 'INSERT INTO ' + table;
 
 			queryString += ' (';
