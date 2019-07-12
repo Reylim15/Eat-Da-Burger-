@@ -5,14 +5,14 @@
 <div class="container">
   <div class="row">
     <div class="col m6 text-center">
-      <h2>Burger Wallet</h2>
+      <h2>Burgers Available</h2>
 <ul>
    {{#each burgers}}
           {{#unless this.devoured}}
             <div>
               <span><strong>{{this.id}} - {{this.burger_name}}</strong></span>
               <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                            data-newDevoured="{{devour}}"><span class=""></span></button>
             </div>
           {{/unless}}
         {{/each}}
@@ -40,7 +40,7 @@
 <div class="row">
 <div class="col m12 text-center">
 
-<h2>Add BURGER</h2>
+<h2>Add A BURGER</h2>
   <div class="form-group">
     <label for="ca">LE BURGER:</label>
     <input type="text" id="ca" name="name">
