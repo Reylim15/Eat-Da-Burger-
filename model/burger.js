@@ -13,7 +13,7 @@ var burger = {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
+    // The variables cols and vals are arreys.
     insertONE: function(cols, vals, cb) {
       orm.insertONE("burgers", cols, vals, function(res) {
         cb(res);
