@@ -1,7 +1,6 @@
-<h1>BURGER</h1>
+<h1>DEVOUR IT!</h1>
 
-<h2>BOIHGUEWR</h2>
-
+<div class="container">
    {{#each burgers}}
           {{#unless this.devoured}}
             <div>
@@ -24,13 +23,11 @@
           {{/if}}
         {{/each}}
 
-<h2>Add BURGER</h2>
-<form class="create-form">
+</div>
 
-  <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
-      <button type="submit" class="addBurgerButton">Add The Burger</button>
-    </form>
+
+
+<h2>Add BURGER</h2>
 
 
 
@@ -39,8 +36,5 @@
     <label for="ca">LE BURGER:</label>
     <input type="text" id="ca" name="name">
   </div>
-
-  </div>
-
   <button type="submit">Add BURGER</button>
 </form>
