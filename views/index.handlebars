@@ -1,6 +1,12 @@
-<h1>DEVOUR IT!</h1>
 
+<div class="webname text-center">
+<h1>MENU!</h1>
+</div>
 <div class="container">
+  <div class="row">
+    <div class="col m6 text-center">
+      <h2>Burger Wallet</h2>
+
    {{#each burgers}}
           {{#unless this.devoured}}
             <div>
@@ -10,8 +16,10 @@
             </div>
           {{/unless}}
         {{/each}}
+</div>
 
-<h2>You eated de boiguhr.</h2>
+<div class="col m6 text-center">
+<h2>Devoured Burgers</h2>
 
   {{#each burgers}}
           {{#if this.devoured}}
@@ -22,19 +30,22 @@
             </div>
           {{/if}}
         {{/each}}
-
+  </div>
+</div>
 </div>
 
-
+<div class="container">
+<div class="row">
+<div class="col m12 text-center">
 
 <h2>Add BURGER</h2>
-
-
-
-
   <div class="form-group">
     <label for="ca">LE BURGER:</label>
     <input type="text" id="ca" name="name">
   </div>
   <button type="submit">Add BURGER</button>
 </form>
+
+</div>
+</div>
+</div>
