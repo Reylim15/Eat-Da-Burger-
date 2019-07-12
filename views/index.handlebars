@@ -1,28 +1,42 @@
-<h1>Cats!</h1>
+<h1>BURGER</h1>
 
-<h2>Cats that are not sleepy!</h2>
+<h2>BOIHGUEWR</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-    {{/unless}}
-  {{/each}}
-</ul>
+   {{#each burgers}}
+          {{#unless this.devoured}}
+            <div>
+              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+              </form>
+            </div>
+          {{/unless}}
+        {{/each}}
 
 <h2>You eated de boiguhr.</h2>
 
-<ul>
   {{#each burgers}}
-    {{#if this.devoured}}
-    {{/if}}
-  {{/each}}
-</ul>
+          {{#if this.devoured}}
+            <div class='burgerEaten'>
+              <div>
+                {{this.burger_name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
 
 <h2>Add BURGER</h2>
 <form class="create-form">
 
+  <form action="/burgers" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
+      <button type="submit" class="addBurgerButton">Add The Burger</button>
+    </form>
+
+
+
+
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
+    <label for="ca">LE BURGER:</label>
     <input type="text" id="ca" name="name">
   </div>
 
