@@ -4,8 +4,3 @@ INSERT INTO burgers (burger_name, devoured) VALUES ('burger3', false);
 INSERT INTO burgers (burger_name, devoured) VALUES ('burger4', false);
 INSERT INTO burgers (burger_name, devoured) VALUES ('burger5', false);
 INSERT INTO burgers (burger_name, devoured) VALUES ('burger6', false);
--- INSERT INTO burgers (name) VALUES ('burger2');
--- INSERT INTO burgers (name) VALUES ('burger3');
--- INSERT INTO burgers (name) VALUES ('burger4');
--- INSERT INTO burgers (name) VALUES ('burger5');
--- INSERT INTO burgers (name) VALUES ('burger6');
